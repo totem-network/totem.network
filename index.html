@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Totem</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/logo_32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/logo_16x16.png">
+        <link rel="shortcut icon" href="/assets/icon/logo_16x16.png">
+
+        <style>
+            /* roboto-300 - latin */
+            @font-face {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 300;
+                src: local('Roboto Light'), local('Roboto-Light'),
+                    url('/assets/fonts/roboto-v18-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+                    url('/assets/fonts/roboto-v18-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            }
+
+            /* roboto-regular - latin */
+            @font-face {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Roboto'), local('Roboto-Regular'),
+                    url('/assets/fonts/roboto-v18-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+                    url('/assets/fonts/roboto-v18-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            }
+
+
+            html, body, #app {
+                background: #f0f0f0;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                font-family: 'Roboto';
+                overflow: hidden;
+            }
+
+            h2 {
+                color: #555;
+                font-size: 2rem;
+                font-weight: 300;
+                margin-left: 2rem;
+                margin-bottom: .3rem;
+            }
+
+            h3 {
+                color: #555;
+                font-size: 1.5rem;
+                font-weight: 300;
+                margin-bottom: .3rem;
+            }
+
+            .description {
+                color: #333;
+                transition: 0.3s ease-out;
+                opacity: 0;
+                top: 8%;
+            }
+
+            .description.show {
+                opacity: 1;
+                top: 4%;
+            }
+
+            @media (min-width: 768px) {
+                .description {
+                    font-size: 1.5rem;
+                    top: 11%;
+                }
+
+                .description.show {
+                    opacity: 1;
+                    top: 7%;
+                }
+            }
+
+            .text {
+                bottom: 25%;
+                color: #333;
+                transition: 0.3s ease-out;
+                transition-delay: .25s;
+                opacity: 0;
+                right: -50%;
+            }
+
+            .text.show {
+                opacity: 1;
+                right: 6%;
+            }
+
+            @media (min-width: 768px) {
+                .text {
+                    font-size: 1.5rem;
+                    bottom: 11%;
+                }
+
+                .text.show {
+                    opacity: 1;
+                }
+            }
+
+            .mobile {
+                max-height: 30vh;
+                transition: 0.3s ease-out;
+                transition-delay: .05s;
+                opacity: 0;
+                right: -50%;
+                top: 4%;
+            }
+
+            .mobile.show {
+                opacity: 1;
+                right: 10%;
+            }
+
+            @media (min-width: 768px) {
+                .mobile {
+                    top: 7%;
+                }
+
+                .mobile.show {
+                    opacity: 1;
+                    top: 7%;
+                }
+            }
+
+            .laptop {
+                left: -50%;
+                margin: 0;
+                opacity: 0;
+                padding: 0;
+                position: absolute;
+                top: 78%;
+                transition: 0.3s ease-out;
+                transition-delay: .15s;
+                width: 60vw;
+            }
+
+            .laptop.show {
+                opacity: 1;
+                left: 7%;
+            }
+
+            @media (min-width: 768px) {
+                .laptop {
+                    bottom: 13%;
+                    left: -50%;
+                    width: 22vw !important;
+                    top: auto;
+                }
+
+                .laptop.show {
+                    opacity: 1;
+                    left: 7%;
+                    top: auto;
+                }
+            }
+
+            .feature {
+                width: 100%;
+            }
+
+            @media (min-width: 768px) {
+                .feature {
+                    width: 30%;
+                }
+            }
+
+            .roadmap {
+                width: 100%;
+            }
+
+            @media (min-width: 768px) {
+                .roadmap {
+                    width: 50%;
+                }
+            }
+
+            @media (min-width: 768px) {
+                .scrollpage {
+                    margin: 2rem 0;
+                }
+            }
+
+        </style>
+
+        <script>
+            if (navigator.serviceWorker) {
+                navigator.serviceWorker.register('/service-worker.js');
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <div id="app">
+
+        </div>
+
+        <script type="text/javascript">
+            var _paq = _paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+            var u="//tracking.totem.network/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', '2']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+            })();
+        </script>
+
+    <script type="text/javascript" src="/bundle.js" defer></script></body>
+
+</html>
